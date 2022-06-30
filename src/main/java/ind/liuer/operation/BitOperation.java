@@ -12,4 +12,19 @@ package ind.liuer.operation;
  * @author Mingの
  */
 public class BitOperation {
+
+    /**
+     * 二进制形式打印int类型值
+     *
+     * @param num int类型的数值
+     */
+    public static void printBinaryString(int num) {
+        for (int i = 31; i >= 0; i--) {
+            String bit = ((1 << i) & num) == 0 ? "0" : "1";
+            System.out.print(bit);
+            if (i % 4 == 0) {
+                System.out.print(" ");
+            }
+        }
+    }
 }
